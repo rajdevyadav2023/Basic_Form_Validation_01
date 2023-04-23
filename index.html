@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form name="form_val" onsubmit=" return submitHandler()">
+        <h2>Registeration For Internship</h2>
+        <div class="form-control">
+            <label for="fist-name">First Name</label>
+            <input type="text" name="first_name" id="first_name" placeholder="Enter Here">
+        </div>
+        <div class="form-control">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last_name" id="last-name" placeholder="Enter Here">
+        </div>
+        <div class="form-control">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone_number" id="phone" placeholder="Enter Here">
+        </div>
+        <div class="form-control">
+            <label for="email">Email Address</label>
+            <input type="email" name="email_id" id="email" placeholder="Enter Here">
+        </div>
+
+        <div class="form-control">
+            <label for="gender">Gender</label>
+            <div class="d-flex">
+                <div>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-control">
+            <label for="course">Courses</label>
+            <select name="course" id="course">
+                <option value="null">Choose Course</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="reactjs">React JS</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <div class="d-flex">
+                <input type="submit" value="SUBMIT">
+                <input type="button" value="RESET">
+            </div>
+        </div>
+    </form>
+
+
+    <script>
+        function submitHandler() {
+            // checkpoint - 1
+            if (form_val.first_name.value == "") {
+                form_val.first_name.style.border = "2px solid orangered";
+            } else
+
+            // checkpoint - 2
+            if (form_val.last_name.value == "") {
+                form_val.last_name.style.border = "2px solid orangered"
+            } else
+
+            // checkpoint - 3
+            if (form_val.first_name.value == "") {
+                form_val.first_name.style.border = "2px solid orangered"
+            } else
+
+            // checkpoint - 4
+            if (form_val.phone_number.value == "") {
+                form_val.phone_number.style.border = "2px solid orangered"
+            } else
+
+            // checkpoint - 5
+            if (form_val.email_id.value == "") {
+                form_val.email_id.style.border = "2px solid orangered"
+            }
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>
